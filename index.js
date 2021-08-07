@@ -27,6 +27,30 @@ const newGame = document.getElementById("new-game");
 
 let demoRay = [];
 
+let trial = 0;
+let tryNumber = 5;
+
+let trialChecker = () => {
+  tryNumber--;
+  trialsNumber.textContent = `(${tryNumber} guesses left)`;
+  gNumber.value = "";
+  trial++;
+
+  if (trial == 5) {
+    guessedSection.style.display = "none";
+    revealAnswer.style.display = "block";
+    checkers.style.display = "none";
+    finalMessage.style.display = "block";
+    newgameSection.style.display = "block";
+  }
+  revealText.textContent += `❌`;
+};
+
+let emptyInput = () => {
+  minNumber.value = "";
+  maxNumber.value = "";
+};
+
 // Prepare the addEventListener for the form
 
 formSubmit.addEventListener("submit", function (event) {
@@ -37,9 +61,7 @@ formSubmit.addEventListener("submit", function (event) {
   let omega = maxNumber.value;
 
   if (Number(omega) < Number(alpha)) {
-    minNumber.value = "";
-    maxNumber.value = "";
-
+    emptyInput();
     errorText.style.display = "inline-block";
     guessedBox.style.display = "none";
   } else {
@@ -53,14 +75,8 @@ formSubmit.addEventListener("submit", function (event) {
     //Generate Random Number for demoRay array position
     let randomNumber = Math.floor(Math.random() * demoRay.length);
 
-    minNumber.value = "";
-    maxNumber.value = "";
-
-    console.log(demoRay[randomNumber]);
-    console.log(demoRay);
-
+    emptyInput();
     guessedNumber.textContent = demoRay[randomNumber];
-
     formSubmit.style.display = "none";
     guessedInput.style.display = "inline-block";
     guessLabel.textContent = `Enter a guess between ${alpha} and ${omega}`;
@@ -73,9 +89,6 @@ formSubmit.addEventListener("submit", function (event) {
 guessedBox.addEventListener("click", function () {
   guessedNumber.style.color = "white";
 });
-
-let trial = 0;
-let tryNumber = 5;
 
 guessForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -92,36 +105,10 @@ guessForm.addEventListener("submit", function (event) {
     trialsNumber.style.display = `none`;
   } else if (Number(gNumber.value) > Number(guessedNumber.textContent)) {
     tryAgain.textContent = "Too high...Try Again.";
-    tryNumber--;
-    trialsNumber.textContent = `(${tryNumber} guesses left)`;
-    gNumber.value = "";
-    trial++;
-
-    if (trial == 5) {
-      guessedSection.style.display = "none";
-      revealAnswer.style.display = "block";
-      checkers.style.display = "none";
-      finalMessage.style.display = "block";
-      newgameSection.style.display = "block";
-    }
-
-    revealText.textContent += `❌`;
+    trialChecker();
   } else if (Number(gNumber.value) < Number(guessedNumber.textContent)) {
     tryAgain.textContent = "Too low...Try Again.";
-    tryNumber--;
-    trialsNumber.textContent = `(${tryNumber} guesses left)`;
-    gNumber.value = "";
-    trial++;
-
-    if (trial == 5) {
-      guessedSection.style.display = "none";
-      revealAnswer.style.display = "block";
-      checkers.style.display = "none";
-      finalMessage.style.display = "block";
-      newgameSection.style.display = "block";
-    }
-
-    revealText.textContent += `❌`;
+    trialChecker();
   }
 });
 
