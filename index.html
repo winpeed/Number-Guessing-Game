@@ -60,13 +60,18 @@
         </div>
       </section>
       <section>
-        <p class="reveal-text"></p>
-        <h3 class="try-again"></h3>
+        <div id="checkers">
+          <p class="reveal-text"></p>
+          <h2 class="try-again"></h2>
+          <p id="trials-number"><small</p>
+        </div>
+        <h2 id="final-message">You guessed wrongly!</h2>
         <div class="guessed-box" id="guessed-box">
           <h3 id="guessed-number"></h3>
         </div>
       </section>
       <section id="newgame-section">
+        <button class="btn btn-green" id="reveal-answer">Reveal Answer</button>
         <button class="btn btn-blue" id="new-game">New Game</button>
       </section>
     </main>

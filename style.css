@@ -62,6 +62,7 @@ input {
   font-weight: 700;
   cursor: pointer;
   width: 100%;
+  margin: 1em 0em;
 }
 
 .input-section {
@@ -89,7 +90,7 @@ input {
 }
 
 #guessed-number {
-  color: green;
+  color: white;
   font-size: 4rem;
 }
 
@@ -131,4 +132,20 @@ input {
   background: white;
   color: #5352ed;
   border: 1px solid #5352ed;
+}
+
+#reveal-answer {
+  display: none;
+}
+
+.reveal-text {
+  font-size: 1.2rem;
+}
+
+#final-message {
+  display: none;
+}
+
+h2 {
+  color: #5352ed;
 }
