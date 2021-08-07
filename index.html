@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Number Guessing Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>Number Guessing Game 🤔</h1>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <form id="form-submit">
+          <label>Minimum Number</label><br />
+          <input
+            type="number"
+            id="min-number"
+            name="minNumber"
+            required
+          /><br />
+          <label>Maximum Number</label><br />
+          <input
+            type="number"
+            id="max-number"
+            name="maxNumber"
+            required
+          /><br />
+          <p class="error">
+            <small
+              >Enter a valid maximum number. It appears less than the minimum
+              number...</small
+            >
+          </p>
+          <br />
+          <button class="btn btn-green" id="enter-button" type="submit">
+            Enter
+          </button>
+        </form>
+      </section>
+
+      <section class="guessed-section">
+        <div id="guessed-input">
+          <form id="guess-form">
+            <label id="guess-label"></label><br />
+            <input type="number" id="g-number" name="gNumber" required /> <br />
+
+            <button class="btn btn-green" id="guessed-button" type="submit">
+              Submit Guess</button
+            ><br />
+          </form>
+        </div>
+      </section>
+      <section>
+        <p class="reveal-text"></p>
+        <h3 class="try-again"></h3>
+        <div class="guessed-box" id="guessed-box">
+          <h3 id="guessed-number"></h3>
+        </div>
+      </section>
+      <section id="newgame-section">
+        <button class="btn btn-blue" id="new-game">New Game</button>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

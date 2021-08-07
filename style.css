@@ -1,0 +1,134 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 14px;
+}
+
+header {
+  text-align: center;
+  padding: 1.5em 1em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='421' preserveAspectRatio='none' viewBox='0 0 1440 421'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1260%26quot%3b)' fill='none'%3e%3crect width='1440' height='421' x='0' y='0' fill='rgba(83%2c 82%2c 237%2c 1)'%3e%3c/rect%3e%3cpath d='M184.38006916120906 66.49162951264242L85.12592325536521 133.43939625805496 152.07369000077776 232.69354216389883 251.3278359066216 165.7457754184863z' fill='rgba(183%2c 188%2c 194%2c 0.25)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M926.8905919260525 266.2066685071664L871.9416208024652 395.3160909115309 993.9281011356252 382.49479518336267z' fill='rgba(183%2c 188%2c 194%2c 0.25)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M662.0966571453804 45.11881982219725L652.0195476284931-36.9526510759722 569.9480767303237-26.87554155908495 580.025186247211 55.19592933908451z' fill='rgba(183%2c 188%2c 194%2c 0.25)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1112.3445370348882 135.48398582616662L1136.112185870179 66.45772154193577 1067.0859215859482 42.6900727066449 1043.3182727506573 111.71633699087575z' fill='rgba(183%2c 188%2c 194%2c 0.25)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M33.676%2c56.528C53.136%2c56.947%2c71.029%2c46.564%2c81.274%2c30.013C92.119%2c12.492%2c96.02%2c-9.668%2c85.686%2c-27.495C75.377%2c-45.278%2c54.228%2c-51.734%2c33.676%2c-52.093C12.334%2c-52.466%2c-11.274%2c-48.062%2c-21.579%2c-29.369C-31.663%2c-11.077%2c-21.799%2c10.47%2c-10.498%2c28.037C-0.338%2c43.831%2c14.9%2c56.124%2c33.676%2c56.528' fill='rgba(183%2c 188%2c 194%2c 0.25)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1436.964%2c146.197C1467.543%2c143.799%2c1487.029%2c116.355%2c1501.065%2c89.082C1513.645%2c64.638%2c1518.075%2c36.923%2c1505.881%2c12.284C1492.13%2c-15.501%2c1467.963%2c-40.074%2c1436.964%2c-40.441C1405.489%2c-40.814%2c1381.295%2c-16.409%2c1365.162%2c10.619C1348.508%2c38.522%2c1337.501%2c72.002%2c1352.709%2c100.718C1368.718%2c130.947%2c1402.862%2c148.872%2c1436.964%2c146.197' fill='rgba(183%2c 188%2c 194%2c 0.25)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1260'%3e%3crect width='1440' height='421' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  color: white;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em 0.5em;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  padding: 0.8em 1em;
+  border-radius: 5px;
+  border: 1px solid #bebdbd;
+  outline: none;
+  margin: 1em 0em 2em 0em;
+  font-size: 0.9rem;
+}
+
+.btn {
+  padding: 0.9em 2.5em;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.guessed-box {
+  border: 1px solid #3ab795;
+  width: 200px;
+  height: 200px;
+  background: #3ab795;
+  color: white;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+#guessed-number {
+  color: green;
+  font-size: 4rem;
+}
+
+.error {
+  display: none;
+  color: red;
+}
+
+#guessed-input {
+  display: none;
+  text-align: center;
+}
+
+#newgame-section {
+  display: none;
+}
+
+.btn-green {
+  background: #2ed573;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.btn-blue {
+  background: #5352ed;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.btn-green:hover {
+  background: white;
+  color: #2ed573;
+  border: 1px solid #2ed573;
+}
+
+.btn-blue:hover {
+  background: white;
+  color: #5352ed;
+  border: 1px solid #5352ed;
+}
